@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="750.0"
+            style="-fx-background-color: #1a1a2e;"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.integradora2ced.controller.MenuController">
+
+    <VBox alignment="CENTER" spacing="40"
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+        <!-- Título del juego -->
+        <Label text="LABERINTO" textFill="#00ffff"
+               style="-fx-font-weight: bold;">
+            <font>
+                <Font size="72" />
+            </font>
+        </Label>
+
+        <!-- Subtítulo -->
+        <Label text="Selecciona un nivel" textFill="#aaaaaa">
+            <font>
+                <Font size="24" />
+            </font>
+        </Label>
+
+        <!-- Contenedor de botones -->
+        <VBox alignment="CENTER" spacing="25">
+            <padding>
+                <Insets top="20" />
+            </padding>
+
+            <!-- Botón Nivel 1 -->
+            <Button fx:id="btnNivel1" onAction="#handleNivel1"
+                    prefHeight="70" prefWidth="300"
+                    style="-fx-background-color: #0f3460; -fx-text-fill: white;
+                           -fx-font-size: 24px; -fx-font-weight: bold;
+                           -fx-background-radius: 10; -fx-cursor: hand;"
+                    text="NIVEL 1">
+            </Button>
+
+            <!-- Descripción Nivel 1 -->
+            <Label text="Matriz completa - Vértices ponderados" textFill="#888888">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+
+            <!-- Botón Nivel 2 -->
+            <Button fx:id="btnNivel2" onAction="#handleNivel2"
+                    prefHeight="70" prefWidth="300"
+                    style="-fx-background-color: #e94560; -fx-text-fill: white;
+                           -fx-font-size: 24px; -fx-font-weight: bold;
+                           -fx-background-radius: 10; -fx-cursor: hand;"
+                    text="NIVEL 2">
+            </Button>
+
+            <!-- Descripción Nivel 2 -->
+            <Label text="Laberinto - Encuentra el camino" textFill="#888888">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+        </VBox>
+
+        <!-- Instrucciones -->
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="40" />
+            </padding>
+
+            <Label text="Usa las flechas o WASD para moverte" textFill="#666666">
+                <font>
+                    <Font size="14" />
+                </font>
+            </Label>
+            <Label text="Llega a la meta antes que los enemigos te atrapen" textFill="#666666">
+                <font>
+                    <Font size="12" />
+                </font>
+            </Label>
+        </VBox>
+    </VBox>
+</AnchorPane>

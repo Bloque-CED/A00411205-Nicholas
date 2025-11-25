@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="750.0"
+            style="-fx-background-color: #1a1a2e;"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.integradora2ced.controller.GameOverController">
+
+    <VBox alignment="CENTER" spacing="40"
+          AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+        <!-- Título resultado -->
+        <Label fx:id="lblResultado" text="¡VICTORIA!"
+               textFill="#00ff00"
+               style="-fx-font-weight: bold;">
+            <font>
+                <Font size="72" />
+            </font>
+        </Label>
+
+        <!-- Mensaje -->
+        <Label fx:id="lblMensaje" text="¡Llegaste a la meta!"
+               textFill="#aaaaaa">
+            <font>
+                <Font size="24" />
+            </font>
+        </Label>
+
+        <!-- Contenedor de botones -->
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="40" />
+            </padding>
+
+            <!-- Botón Reintentar -->
+            <Button fx:id="btnReintentar" onAction="#reintentar"
+                    prefHeight="60" prefWidth="250"
+                    style="-fx-background-color: #0f3460; -fx-text-fill: white;
+                           -fx-font-size: 20px; -fx-font-weight: bold;
+                           -fx-background-radius: 10; -fx-cursor: hand;"
+                    text="REINTENTAR">
+            </Button>
+
+            <!-- Botón Menú Principal -->
+            <Button fx:id="btnMenu" onAction="#volverAlMenu"
+                    prefHeight="60" prefWidth="250"
+                    style="-fx-background-color: #666666; -fx-text-fill: white;
+                           -fx-font-size: 20px; -fx-font-weight: bold;
+                           -fx-background-radius: 10; -fx-cursor: hand;"
+                    text="MENÚ PRINCIPAL">
+            </Button>
+        </VBox>
+    </VBox>
+</AnchorPane>
